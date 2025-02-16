@@ -10,19 +10,19 @@ body {
     height: 100vh;
     width: 100vw;
     display: flex;
-    flex-direction: column; /* Arrange content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    position: absolute; /* Stack all pages on top of each other */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
     top: 0;
     left: 0;
     transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
     opacity: 0;
     visibility: hidden;
-    text-align: center; /* Center text on all pages */
+    text-align: center;
 }
 
-/* Default active page (Page 1) */
+/* Default active page */
 #page1 {
     background-color: black;
     color: white;
@@ -32,7 +32,7 @@ body {
 }
 
 #page2, #page3, #page4, #page5, #page6, #page7 {
-    background-color: #8dcfed; /* Light pink */
+    background-color: #8dcfed;
     color: black;
 }
 
@@ -45,7 +45,7 @@ body {
 
 /* Button Styles */
 .btn {
-    margin: 20px 0; /* Add spacing between buttons and other elements */
+    margin: 20px 0;
     padding: 15px 30px;
     font-size: 18px;
     color: white;
@@ -56,10 +56,6 @@ body {
     transition: transform 0.3s, background-color 0.3s;
     z-index: 2;
 }
-/* Page 3 Background Image */
-#page3 {
-    background: url('https://raw.githubusercontent.com/Sohida16/birthday-website/refs/heads/main/WhatsApp%20Image%202025-02-13%20at%2012.13.55_8f629df4.jpg') center/cover no-repeat;
-    color: white; /* Ensures text is visible against the background */
 
 .btn:hover {
     transform: scale(1.1);
@@ -68,39 +64,30 @@ body {
 /* Text Styles */
 h1 {
     font-size: 2.5rem;
-    margin-bottom: 20px; /* Add spacing below the heading */
+    margin-bottom: 20px;
 }
 
 p {
     font-size: 1.2rem;
     line-height: 1.6;
-    max-width: 80%; /* Limit text width for better readability */
-    margin: 10px auto; /* Center the paragraph */
+    max-width: 80%;
+    margin: 10px auto;
 }
 
-/* Dim Lights */
-.dim-lights {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(255, 255, 0, 0.1), rgba(0, 0, 0, 1));
-    animation: fadeIn 2s ease-in;
-    z-index: 0;
+/* Page 3 Background Image */
+#page3 {
+    background: url('https://raw.githubusercontent.com/Sohida16/birthday-website/main/WhatsApp%20Image%202025-02-13%20at%2012.13.55_8f629df4.jpg') center/cover no-repeat;
+    color: white;
 }
 
-/* Balloons and Ribbons */
-.balloons, .ribbons {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+/* Page 4 - Different Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+#page4 {
+    font-family: 'Poppins', sans-serif;
 }
 
-.balloons {
-    background: url(https://imgur.com/a/G3co3Tk) repeat;
-    animation: float 5s infinite;
-}
-
-/* Cake */
+/* Cake Animation */
 .cake {
     font-size: 5rem;
     animation: bounce 2s infinite;
@@ -108,20 +95,11 @@ p {
 }
 
 /* Animations */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
 }
 
-@keyframes float {
-    0% { background-position-y: 100%; }
-    100% { background-position-y: 0%; }
-}
-
-@keyframes fall {
-    0% { background-position-y: -100%; }
-    100% { background-position-y: 100%; }
-}
 
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
