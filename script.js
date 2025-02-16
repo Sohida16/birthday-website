@@ -47,4 +47,4 @@ function startTimer() {
 }
 
 // Initialize the first page
-initializePage();
+initializePage(); 
