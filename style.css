@@ -99,3 +99,10 @@ p {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
 }
+
+/* Reduce font size for Page 6 text */
+#page6 p {
+    font-size: 14px; /* Adjust as needed */
+    line-height: 1.5;
+    max-width: 90%; /* Optional: makes text more readable */
+}
